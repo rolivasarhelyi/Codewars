@@ -17,7 +17,8 @@ function count(string) {
 
 function duplicateEncode(word) {
   const wordObj = {};
-  word.split('').forEach((e) => {
+  const wordArr = word.toLowerCase().split('');
+  wordArr.forEach((e) => {
     if (e in wordObj) {
       wordObj[e] += 1;
     } else {
@@ -25,15 +26,12 @@ function duplicateEncode(word) {
     }
   });
   let finalStr = '';
-  word
-    .toLowerCase()
-    .split('')
-    .forEach((e) => {
-      if (wordObj[e] > 1) {
-        finalStr += ')';
-      } else {
-        finalStr += '(';
-      }
-    });
+  wordArr.forEach((e) => {
+    if (wordObj[e] > 1) {
+      finalStr += ')';
+    } else {
+      finalStr += '(';
+    }
+  });
   return finalStr;
 }
