@@ -35,3 +35,13 @@ function duplicateEncode(word) {
   });
   return finalStr;
 }
+
+function solution(string) {
+  return string.replace(/([A-Z])/g, ' $1');
+}
+
+function oddOrEven(array) {
+  //enter code here
+  let sum = array.reduce((acc, e) => acc + e, 0);
+  return sum % 2 === 0 ? 'even' : 'odd';
+}
