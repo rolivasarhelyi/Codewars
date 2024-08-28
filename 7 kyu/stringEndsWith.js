@@ -8,6 +8,6 @@ function stringEndsWith(start, end) {
 }
 
 const start = 'abcde';
-const end = 'cd';
+const end = 'cde';
 
 console.log(stringEndsWith(start, end));
